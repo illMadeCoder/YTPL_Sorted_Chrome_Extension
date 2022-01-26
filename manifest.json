@@ -7,7 +7,7 @@
     "background": {
         "service_worker": "background.js"
     },
-    "permissions": ["storage", "activeTab", "scripting"],
+    "permissions": ["storage", "activeTab", "scripting", "tabs"],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
@@ -16,5 +16,8 @@
             "48": "/images/get_started48.png",
             "128": "/images/get_started128.png"
         }
-    }
+    },
+    "host_permissions": [
+        "http://localhost:8000/*"
+    ]
   }
