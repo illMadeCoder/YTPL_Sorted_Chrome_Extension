@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 let addToPlaylistList = document.getElementById("addToPlaylistListButton");
 let submitButton = document.getElementById("submitButton"); 
 
@@ -12,7 +13,7 @@ addToPlaylistList.addEventListener("click", async () => {
         
         playlistIDs.push(playlistID)        
         let list = document.getElementById("playlistIDs")
-        list.innerText +=  playlistID        
+        list.innerText +=  "<li>" + playlistID + "</li>"
         chrome.storage.sync.set({playlistIDs: playlistIDs})
     })    
 })
