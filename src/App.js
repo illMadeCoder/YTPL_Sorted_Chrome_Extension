@@ -10,8 +10,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />        
         <button id="submitButton" onClick={submit}>Create Playlist</button>
         <button id="cancelButton" onClick={cancel}>Reset</button>
-        <button id="addToPlaylistListButton" onClick={appendPlaylist}>Add Playlist</button>
-        <ul id="playlistIDs">            
+        <button id="appendPlaylistButton" onClick={appendPlaylist}>Aspend</button>
+        <ul id="playlistIDs">
         </ul>
       </header>
     </div>
