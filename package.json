@@ -24,7 +24,7 @@
   "scripts": {
     "watch": "npm-watch",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --dev",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
