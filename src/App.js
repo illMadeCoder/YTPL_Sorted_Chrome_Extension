@@ -3,6 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 
+// const RemoveButton = ({}) => {
+  
+// }
+
+
+const StageDisplay = ({stage}) => {
+  return <ul id="stage">
+    {stage.map(playlistID => <li key={playlistID}>
+                                <button onClick={() => removeFromStage(playlistID)}>Delete</button>
+                                      {playlistID}
+                             </li>)}
+  </ul>
+}
+
 function App() {
   const [stage, setStage] = useState([])
   chrome.storage.sync.get("stage", ({stage})=>setStage(stage))
@@ -13,12 +27,16 @@ function App() {
         <button id="appendPlaylistToStageButton" onClick={appendPlaylistToStage}>Append Playlist</button>
         <button id="submitStageButton" onClick={submitStage}>Submit</button>
         <button id="clearStageButton" onClick={clearStage}>Clear</button>
-        <ul id="stage">
-          {stage.map(playlistID => <li key={playlistID}>{playlistID}</li>)}
-        </ul>
+        <StageDisplay stage={stage} />
       </header>
     </div>
   );
+}
+
+async function removeFromStage(playlistID) {
+  chrome.storage.sync.get({stage: []}, ({stage}) => {
+    chrome.storage.sync.set({stage: stage.filter(x=>x!=playlistID)})
+  })
 }
 
 async function clearStage() {
@@ -41,8 +59,8 @@ async function appendPlaylistToStage() {
 async function submitStage() {
   chrome.storage.sync.get({stage: [], stageHistory: []}, ({stage, stageHistory}) => {    
     chrome.storage.sync.set({stageHistory:stageHistory.concat([stage])})
-    let playlistIDsCSV = stage.join(",")    
-    fetch(`http://localhost:8000/ytplsorted?playlistIDs=${playlistIDsCSV}&sortby=ratio`)
+    let stageCSV = stage.join(",")    
+    fetch(`http://localhost:8000/ytplsorted?playlistIDs=${stageCSV}&sortby=ratio`)
         .then(r => r.text())
         .then(url => chrome.tabs.create({ url: url }))
         .catch(e => console.log(e))        

@@ -19,8 +19,8 @@
 - [x] Implement Reset stage button
         set the stage to an empty list
 - [x] Display the stage
-    - [ ] for now a list of playlist IDs are fine
-    - [ ] display a button to remove the playlist from the stage
+    - [x] for now a list of playlist IDs are fine
+    - [x] display a button to remove the playlist from the stage
 - [ ] Implement some aesthetic with a UI/UX Framework (to be determined)
 - [ ] Publish to the web for friends/family usage
 - [ ] Setup testing framework and test what we have before moving to Alpha
