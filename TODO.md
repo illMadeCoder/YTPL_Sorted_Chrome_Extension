@@ -23,9 +23,11 @@
     - [x] display a button to remove the playlist from the stage
 - [x] Implement some aesthetic with a UI/UX Framework (Material UI)
 - [ ] Publish to the web for friends/family usage
-- [ ] Setup testing framework and test what we have before moving to Alpha
 - [ ] Determine when/if to ever work at the video level???
     - [ ] delete videos from a playlist before the sorted playlist generates
+- [x] Come up with a name (I did! 'Youtube Mixtape')    
+- [ ] Endpoint should be called once per update at most
+- [ ] Cache stage info so there doesn't need to be a fetch unless an update occurs
 # Alpha
 - [ ] Display a list of some of the Previous stages    
     - [ ] On Previous Playlist Selection a UI/UX that displays the set of subplaylists to choose from that aren't already in the current stage

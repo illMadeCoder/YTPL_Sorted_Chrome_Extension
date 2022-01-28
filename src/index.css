@@ -19,3 +19,19 @@ code {
 li {
   list-style-type: none
 }
+
+.App {
+  display:flex;  
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.StageButtons {
+  display:flex;
+  justify-content: space-around;
+}
+
+.Header {
+  padding-bottom: 1rem;
+}
+
