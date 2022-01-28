@@ -21,7 +21,7 @@
 - [x] Display the stage
     - [x] for now a list of playlist IDs are fine
     - [x] display a button to remove the playlist from the stage
-- [ ] Implement some aesthetic with a UI/UX Framework (to be determined)
+- [x] Implement some aesthetic with a UI/UX Framework (Material UI)
 - [ ] Publish to the web for friends/family usage
 - [ ] Setup testing framework and test what we have before moving to Alpha
 - [ ] Determine when/if to ever work at the video level???
