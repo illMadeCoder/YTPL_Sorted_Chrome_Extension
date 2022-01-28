@@ -15,7 +15,7 @@
     - [x] do not append a playlist that has already been appended (no duplicate playlist ids in the stage)
 - [x] Implement Submit stage button
     - [x] call the local (not on the web yet) API 'YTPL Sorted Enpoint' with the stage and redirect the result to a new tab
-    - [ ] this stage should be stored in the user's account as PreviousPlaylistStages
+    - [x] this stage should be stored in the user's account as StageHistory
 - [x] Implement Reset stage button
         set the stage to an empty list
 - [x] Display the stage
