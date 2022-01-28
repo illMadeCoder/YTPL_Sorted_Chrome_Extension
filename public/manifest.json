@@ -1,12 +1,8 @@
 {
     "name": "YTPL_Sorted",
-    "options_page": "options.html",
     "description": "Support the YoutubePlaylist_Sorted API",
     "version": "1.0",
     "manifest_version": 3,
-    "background": {
-        "service_worker": "background.js"
-    },
     "permissions": ["storage", "activeTab", "scripting", "tabs"],
     "action": {
         "default_popup": "index.html"

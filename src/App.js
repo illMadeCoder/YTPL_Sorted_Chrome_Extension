@@ -2,33 +2,44 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-
-// const RemoveButton = ({}) => {
-  
-// }
-
+import Button from '@mui/material/Button';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+// adjust theme here https://bareynol.github.io/mui-theme-creator/
+const theme = createTheme({
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#373737',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+    background: {
+      default: '#ff4f4f',
+    },
+  },
+});
 
 const StageDisplay = ({stage}) => {
   return <ul id="stage">
     {stage.map(playlistID => <li key={playlistID}>
-                                <button onClick={() => removeFromStage(playlistID)}>Remove</button>
+                                <Button variant="contained" onClick={() => removeFromStage(playlistID)}>Remove</Button>
                                       {playlistID}
                              </li>)}
   </ul>
 }
-
+//2
 function App() {
   const [stage, setStage] = useState([])
   chrome.storage.sync.get("stage", ({stage})=>setStage(stage))
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <button id="appendPlaylistToStageButton" onClick={appendPlaylistToStage}>Append Playlist</button>
-        <button id="submitStageButton" onClick={submitStage}>Submit</button>
-        <button id="clearStageButton" onClick={clearStage}>Clear</button>
-        <StageDisplay stage={stage} />
-      </header>
+      <ThemeProvider theme={theme}>          
+          <Button variant="contained" id="appendPlaylistToStageButton" onClick={appendPlaylistToStage}>Append Playlist</Button>
+          <Button variant="contained" id="submitStageButton" onClick={submitStage}>Submit</Button>
+          <Button variant="contained" id="clearStageButton" onClick={clearStage}>Clear</Button>
+          <StageDisplay stage={stage} />
+      </ThemeProvider>
     </div>
   );
 }

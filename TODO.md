@@ -55,6 +55,7 @@
         - [ ] Delete a favorited stage button
         - [ ] Pull in subplaylists to current stage feature implemented for previous playlists
     - [ ] Edit favorited stages
+- [ ] Thank you for installing instructions page    
 # Beta
 - [ ] Add friends (maybe just through google chrome accounts???)
 - [ ] View friend's playlists
