@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 const StageDisplay = ({stage}) => {
   return <ul id="stage">
     {stage.map(playlistID => <li key={playlistID}>
-                                <button onClick={() => removeFromStage(playlistID)}>Delete</button>
+                                <button onClick={() => removeFromStage(playlistID)}>Remove</button>
                                       {playlistID}
                              </li>)}
   </ul>
