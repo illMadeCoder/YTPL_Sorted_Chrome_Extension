@@ -13,6 +13,7 @@
 - [x] Implement Append stage button 
     - [x] look at the current tab's url for a playlist ID and append it to the user's stage
     - [x] do not append a playlist that has already been appended (no duplicate playlist ids in the stage)
+    - [ ] highlight append button while on a new playlist
 - [x] Implement Submit stage button
     - [x] call the local (not on the web yet) API 'YTPL Sorted Enpoint' with the stage and redirect the result to a new tab
     - [x] this stage should be stored in the user's account as StageHistory
@@ -21,6 +22,7 @@
 - [x] Display the stage
     - [x] for now a list of playlist IDs are fine
     - [x] display a button to remove the playlist from the stage
+    - [ ] when the stage is empty display a message
 - [x] Implement some aesthetic with a UI/UX Framework (Material UI)
 - [ ] Publish to the web for friends/family usage
 - [ ] Determine when/if to ever work at the video level???
@@ -28,6 +30,8 @@
 - [x] Come up with a name (I did! 'Youtube Mixtape')    
 - [ ] Endpoint should be called once per update at most
 - [ ] Cache stage info so there doesn't need to be a fetch unless an update occurs
+- [X] merge stage and stage info, it's unnecessary work to maintain both
+
 # Alpha
 - [ ] Display a list of some of the Previous stages    
     - [ ] On Previous Playlist Selection a UI/UX that displays the set of subplaylists to choose from that aren't already in the current stage
